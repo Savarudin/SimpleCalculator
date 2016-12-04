@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.button_bagi)
     Button buttonBagi;
+
     @BindView(R.id.text_hasil)
     TextView textHasil;
+
+    @BindView(R.id.reset)
+    Button reset;
 
 
     @Override
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
+
+    @OnClick(R.id.reset)
+    public void onClick() {
+        inputOne.setText("");
+        inputTwo.setText("");
     }
 
 
@@ -79,4 +88,6 @@ public class MainActivity extends AppCompatActivity {
             textHasil.setText(String.valueOf(hasil));
         }
     }
+
+
 }

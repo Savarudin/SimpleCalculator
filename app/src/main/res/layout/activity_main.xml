@@ -12,9 +12,9 @@
         android:textSize="@dimen/text_size"
         android:text="@string/title"/>
     <ImageView
-        android:layout_width="210dp"
+        android:layout_width="@dimen/text_image"
         android:src="@drawable/calcu"
-        android:layout_height="210dp" />
+        android:layout_height="@dimen/text_image" />
 
     <EditText
         android:id="@+id/input1"
@@ -37,21 +37,43 @@
 
         <Button
             android:id="@+id/button_tambah"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorTextButton"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+" />
 
         <Button
             android:id="@+id/button_kurang"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/text_size"
+            android:layout_marginLeft="@dimen/text_size"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+
+            android:textColor="@color/colorTextButton"
             android:layout_height="wrap_content"
             android:text="-" />
 
         <Button
             android:id="@+id/button_bagi"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorTextButton"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/text_size"
             android:layout_height="wrap_content"
             android:text="/" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/reset"
+            android:textColor="@color/colorTextButton"
+            android:background="@color/colorPrimary"
+            android:text="c"/>
 
     </LinearLayout>
 
